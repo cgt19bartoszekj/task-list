@@ -1,0 +1,82 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+body {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    font-family: "Roboto", sans-serif;
+    font-size: 25px;
+}
+
+.container {
+    margin: 30px;
+}
+
+.addTask {
+    background-color: #ffffff;
+    padding: 15px;
+}
+
+.addTask__title {
+    margin: 0;
+}
+.addTask__form{
+    display: flex;
+    width: 100%;
+}
+.addTask__input{
+    font-size: 25px;
+    width: 75%;
+}
+.addTask__addButton{
+    font-size: 25px;
+    width: 25%;
+}
+
+.taskList {
+    background-color: #ffffff;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.taskList__title {
+    margin: 0;
+}
+
+.taskList__list {
+    list-style: none;
+    padding: 0;
+}
+
+.taskList__task {
+    border: 1px solid black;
+    padding: 5px;
+    display: flex;
+}
+
+.taskList__checkButton {
+    font-size: 30px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.taskList__listText {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+}
+
+.taskList__removeButton {
+    font-size: 30px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
