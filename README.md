@@ -2,7 +2,7 @@
 ## demo
 https://cgt19bartoszekj.github.io/task-list/
 ## About this project
-This website allows you add, remove and check tasks.
+This website allows you to add, remove and check tasks.
 
 !["Website"](/images/website-gif.gif)
 
