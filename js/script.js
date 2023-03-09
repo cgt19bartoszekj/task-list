@@ -29,27 +29,16 @@
 
         for (const task of tasks) {
             let taskStatus = "";
-            let taskEditable = "";
 
-            switch(task.done){
-                case true:
-                    taskStatus = "taskList__taskName--done";
-                    taskEditable = ""
-                    break;
-                case false:
-                    taskStatus = "";
-                    taskEditable = "contenteditable"
-                    break;
-            };
+            task.done === true ? taskStatus = "taskList__taskName--done" : "";
 
             htmlString += `
             <li class="taskList__task">
             <button class="taskList__button js-checkButton">&#10004;</button>
-            <span ${taskEditable} class="taskList__taskName ${taskStatus}">${task.name}</span>
+            <span class="taskList__taskName ${taskStatus}">${task.name}</span>
             <button class="taskList__button taskList__button--remove js-removeButton">&#128465;</button>
             </li>
             `;
-            console.log(taskStatus)
         };
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
