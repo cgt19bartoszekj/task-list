@@ -11,16 +11,20 @@
 </head>
 
 <body>
-    <div class="taskList">
-        <form class="taskList__form js-form">
-            <input class="taskList__input js-newTask">
-            <button class="taskList__addButton">Dodaj zadanie</button>
-        </form>
-    
-        <ul class="taskList__list js-tasks">
-            
-        </ul>
-    
+    <div class="container">
+        <h1 class="container__title">Lista zadań</h1>
+        <div class="addTask">
+            <h2 class="addTask__title">Dodaj nowe zadanie</h2>
+            <form class="addTask__form js-form">
+                <input class="addTask__input js-newTask">
+                <button class="addTask__addButton">Dodaj zadanie</button>
+            </form>
+        </div>
+        <div class="taskList">
+            <h2 class="taskList__title">Twoja lista zadań</h2>
+            <ul class="taskList__list js-tasks">
+            </ul>
+        </div>
     </div>
 </body>
 

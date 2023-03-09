@@ -1,13 +1,6 @@
 {
     const tasks = [
-        {
-            name: "zadanie",
-            done: false,
-        },
-        {
-            name: "inne zadanko",
-            done: true,
-        },
+
     ];
 
     const addNewTask = (newTaskName) => {
@@ -26,19 +19,37 @@
         render();
     };
 
+    const checkTask = (taskIndex) => {
+        tasks[taskIndex].done = !tasks[taskIndex].done;
+        render();
+    };
+
     const render = () => {
         let htmlString = "";
 
         for (const task of tasks) {
-            let taskStatus;
-            task.done === true ? taskStatus = "taskList__task--done" : "taskList__task";
+            let taskStatus = "";
+            let taskEditable = "";
+
+            switch(task.done){
+                case true:
+                    taskStatus = "taskList__taskName--done";
+                    taskEditable = ""
+                    break;
+                case false:
+                    taskStatus = "";
+                    taskEditable = "contenteditable"
+                    break;
+            };
+
             htmlString += `
-            <li class="${taskStatus}">
-            <button class="taskList__checkButton js-checkButton">Odznacz</button>
-            ${task.name}
-            <button class="taskList__removeButton js-removeButton">Usuń</button>
+            <li class="taskList__task">
+            <button class="taskList__button js-checkButton">&#10004;</button>
+            <span ${taskEditable} class="taskList__taskName ${taskStatus}">${task.name}</span>
+            <button class="taskList__button taskList__button--remove js-removeButton">&#128465;</button>
             </li>
             `;
+            console.log(taskStatus)
         };
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
@@ -48,6 +59,12 @@
             removeButton.addEventListener("click", () => {
                 removeTask(taskIndex);
             });
+        });
+
+        const checkButtons = document.querySelectorAll(".js-checkButton")
+        checkButtons.forEach((checkButton, taskIndex) => {
+            checkButton.addEventListener("click", () =>
+                checkTask(taskIndex));
         });
     };
 

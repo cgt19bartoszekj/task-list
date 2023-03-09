@@ -14,10 +14,87 @@ body {
     font-size: 25px;
 }
 
-.taskList__task {
-    
+.container {
+    margin: 20px;
 }
 
-.taskList__task--done {
+.addTask {
+    background-color: #ffffff;
+    padding: 20px;
+    width: 100%;
+}
+
+.addTask__form {
+    display: flex;
+    margin: 10px 0 0 0;
+}
+
+.addTask__title {
+    margin: 0;
+}
+
+.addTask__input {
+    width: 70%;
+    font-size: 30px;
+}
+
+.addTask__addButton {
+    width: 25%;
+    margin: 0 0 0 auto;
+    font-size: 25px;
+}
+
+.taskList {
+    padding: 20px;
+    margin-top: 10px;
+    background-color: #ffffff;
+}
+
+.taskList__title {
+    margin: 0;
+}
+
+.taskList__list {
+    list-style: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+}
+
+.taskList__task {
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+    border: 1px solid #e0e0e0;
+}
+
+.taskList__task:hover {
+    background-color: #f0f0f0;
+}
+
+.taskList__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50px;
+    height: 50px;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.taskList__taskName {
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.taskList__button--remove {
+    font-weight: bold;
+}
+
+.taskList__taskName--done {
+    background-color: #dddddd;
+    color: #555555;
     text-decoration: line-through;
 }
