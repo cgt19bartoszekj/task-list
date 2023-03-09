@@ -1,0 +1,45 @@
+.addTask {
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding: 30px;
+    width: 100%;
+}
+
+.addTask__title {
+    margin: 0;
+}
+
+.addTask__form {
+    display: flex;
+    margin: 30px 0 0 0;
+}
+
+@media screen and (max-width: 805px) {
+    .addTask__form {
+        display: block;
+    }
+}
+
+.addTask__input {
+    width: 70%;
+    font-size: 25px;
+}
+
+@media screen and (max-width: 805px) {
+    .addTask__input {
+        width: 100%;
+    }
+}
+
+.addTask__addButton {
+    width: 25%;
+    margin: 0 0 0 auto;
+    font-size: 25px;
+}
+
+@media screen and (max-width: 805px) {
+    .addTask__addButton {
+        margin-top: 10px;
+        width: 100%;
+    }
+}

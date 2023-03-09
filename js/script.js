@@ -1,7 +1,5 @@
 {
-    const tasks = [
-
-    ];
+    const tasks = [];
 
     const addNewTask = (newTaskName) => {
         tasks.push(
@@ -63,6 +61,7 @@
         const newTaskName = document.querySelector(".js-newTask").value.trim();
 
         if (newTaskName === "") {
+            clearFocus();
             return;
         };
 
