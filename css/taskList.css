@@ -65,3 +65,7 @@
     background-color: #ff0000;
     font-weight: bold;
 }
+.taskList__button--remove:hover {
+    color: #ffffff;
+    background-color: #ff5050;
+}
