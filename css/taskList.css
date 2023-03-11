@@ -37,7 +37,12 @@
     cursor: pointer;
 }
 
-.taskList__button--checked{
+.taskList__button:hover {
+    background-color:#00ff00;
+    color: #00ff00;
+}
+
+.taskList__button--checked.taskList__button--checked {
     color: #ffffff;
 }
 
