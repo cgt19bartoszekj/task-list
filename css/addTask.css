@@ -52,3 +52,11 @@
         width: 100%;
     }
 }
+
+.addTask__addButton:hover {
+    background-color: #008a9c;
+}
+
+.addTask__addButton:active {
+    background-color: hsl(187, 100%, 35%);
+}
