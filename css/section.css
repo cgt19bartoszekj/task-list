@@ -48,6 +48,14 @@
     color: #008799;
 }
 
+.section__button:disabled{
+    color: grey;
+}
+
+.section__button--hidden{
+    display: none;
+}
+
 .section__body {
     padding: 20px;
     border-top: 1px solid grey;

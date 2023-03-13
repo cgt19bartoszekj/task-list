@@ -11,6 +11,10 @@
     margin-bottom: 10px;
 }
 
+.tasks__task--hidden {
+display: none;
+}
+
 .tasks__taskName {
     padding-left: 20px;
 }
