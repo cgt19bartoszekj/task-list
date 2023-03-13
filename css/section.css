@@ -12,6 +12,7 @@
 }
 
 .section__titleContainer--withTaskButtons{
+    align-items: center;
     display: grid;
     grid-template-columns: 1fr auto;
 }
@@ -24,10 +25,13 @@
 
 .section__hideAndToggleButtons{
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px
 }
 
 @media screen and (max-width: 800px) {
     .section__hideAndToggleButtons{
+        margin-top: 10px;
         grid-template-columns: 1fr;
     }
 }
@@ -37,7 +41,6 @@
     background: none;
     border: none;
     color: #007382;
-    margin-top: 10px;
     transition: 1s;
 }
 
