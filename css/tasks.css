@@ -1,0 +1,52 @@
+.tasks {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.tasks__task {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+    margin-bottom: 10px;
+}
+
+.tasks__taskName {
+    padding-left: 20px;
+}
+
+.tasks__taskName--done {
+    text-decoration: line-through #000000;
+    color: #323232;
+}
+
+.tasks__button {
+    font-size: 30px;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    background-color: #008800;
+    border: none;
+    color: #008800;
+    transition: 1s;
+}
+
+.tasks__button:hover {
+    background-color: #00ff00;
+    color: #00ff00;
+}
+
+.tasks__button--checked.tasks__button--checked {
+    color: #ffffff;
+}
+
+.tasks__button--remove {
+    font-weight: 600;
+    background-color: #880000;
+    color: #ffffff;
+}
+
+.tasks__button--remove:hover {
+    background-color: #ff0000;
+    color: #ffffff;
+}

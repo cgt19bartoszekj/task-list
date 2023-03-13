@@ -1,0 +1,29 @@
+.form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    .form{
+        grid-template-columns: 1fr;
+    }
+}
+
+.form__input {
+    padding: 5px;
+}
+
+.form__addButton {
+    background-color: #007382;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.form__addButton:hover {
+    background-color: #008799;
+    transform: scale(1.1);
+}

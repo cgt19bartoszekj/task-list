@@ -1,0 +1,51 @@
+.section {
+    background-color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.section__titleContainer{
+    padding: 20px;
+}
+
+.section__title {
+    margin: 0;
+}
+
+.section__titleContainer--withTaskButtons{
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+@media screen and (max-width: 800px) {
+    .section__titleContainer--withTaskButtons{
+        grid-template-columns: 1fr;
+    }
+}
+
+.section__hideAndToggleButtons{
+    display: grid;
+}
+
+@media screen and (max-width: 800px) {
+    .section__hideAndToggleButtons{
+        grid-template-columns: 1fr;
+    }
+}
+
+.section__button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #007382;
+    margin-top: 10px;
+    transition: 1s;
+}
+
+.section__button:hover{
+    color: #008799;
+}
+
+.section__body {
+    padding: 20px;
+    border-top: 1px solid grey;
+}

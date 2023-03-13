@@ -36,22 +36,37 @@
         render();
     };
 
-    const render = () => {
-        let htmlString = "";
+    const renderButtons = () => {
+        let buttonsHTMLContent = "";
+
+        buttonsHTMLContent += `
+        <button class="section__button section__button--hide">Ukryj ukończone</button>
+        <button class="section__button section__button--toggleAllDone">Ukończ wszystkie</button>
+        `;
+
+        document.querySelector(".js-hideAndToggleButtons").innerHTML = buttonsHTMLContent;
+    };
+
+    const renderTasks = () => {
+        let TaskListHTMLContent = "";
 
         for (const task of tasks) {
 
-            htmlString += `
-            <li class="taskList__task">
-                <button class="taskList__button ${task.done === true? "taskList__button--checked" : ""} js-checkButton">&#10004;</button>
-                <span class="taskList__taskName ${task.done === true ? "taskList__taskName--done" : ""}">${task.name}</span>
-                <button class="taskList__button taskList__button--remove js-removeButton">&#128465;</button>
+            TaskListHTMLContent += `
+            <li class="tasks__task">
+                <button class="tasks__button ${task.done === true? "tasks__button--checked" : ""} js-checkButton">&#10004;</button>
+                <span class="tasks__taskName ${task.done === true ? "tasks__taskName--done" : ""}">${task.name}</span>
+                <button class="tasks__button tasks__button--remove js-removeButton">&#128465;</button>
             </li>
             `;
         };
 
-        document.querySelector(".js-tasks").innerHTML = htmlString;
+        document.querySelector(".js-tasks").innerHTML = TaskListHTMLContent;
+    };
 
+    const render = () => {
+        renderTasks();
+        renderButtons();
         bindEvents();
     };
 
